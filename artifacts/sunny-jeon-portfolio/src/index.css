@@ -14,11 +14,11 @@
 
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  --color-card-border: var(--card-border));
+  --color-card-border: var(--card-border);
 
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-popover-border: var(--popover-border));
+  --color-popover-border: var(--popover-border);
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
@@ -462,7 +462,7 @@ body { margin: 0; }
 .page-content { max-width: 1440px; margin: auto; padding: 0 clamp(24px, 8.6vw, 132px); }
 .hero { min-height: 667px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 7%; padding: 56px 0 76px; position: relative; }
 .hero-copy { padding-top: 6px; }
-.eyebrow { margin: 0 0 20px; color: var(--muted-ink); text-transform: uppercase; font: 500 11px var(--app-font-mono); letter-spacing: .12em; }
+.eyebrow { margin: 0 0 20px; color: var(--muted-ink); text-transform: uppercase; font: 500 12px var(--app-font-mono); letter-spacing: .14em; }
 .hero .eyebrow { display: flex; align-items: center; gap: 9px; }
 .status-dot { width: 7px; height: 7px; background: var(--rust); border-radius: 50%; display: inline-block; box-shadow: 0 0 0 4px rgba(168,93,69,.1); }
 .hero h1 { font-size: clamp(62px, 7.8vw, 108px); line-height: .91; letter-spacing: -.045em; font-weight: 400; margin: 0 0 27px; }
@@ -490,7 +490,7 @@ body { margin: 0; }
 .research { padding: 100px 0 117px; border-top: 1px solid var(--rule); }
 .section-label { display: flex; align-items: center; gap: 13px; padding-top: 12px; color: var(--muted-ink); font-size: 9px; letter-spacing: .1em; white-space: nowrap; }
 .section-rule { height: 1px; flex: 1; background: var(--rule); }
-.section-body .eyebrow { margin-bottom: 17px; }
+.section-body .eyebrow { margin-bottom: 20px; }
 .section-heading { margin: 0; font-size: clamp(42px, 5.1vw, 68px); line-height: .99; letter-spacing: -.035em; font-weight: 400; }
 .research-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; margin-top: 27px; max-width: 770px; }
 .research-intro p, .teaching-text p { margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.8; }
