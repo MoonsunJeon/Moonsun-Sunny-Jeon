@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Moonsun (Sunny) Jeon — Research"
+description = "An academic research profile for Moonsun (Sunny) Jeon, featuring her work in persuasion, health and environmental communication, immersive media, and AI-mediated communication."
+version = "1.0.0"
+id = "artifacts/sunny-jeon-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22090
+
+[services.development]
+run = "pnpm --filter @workspace/sunny-jeon-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sunny-jeon-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sunny-jeon-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22090"
+BASE_PATH = "/"
