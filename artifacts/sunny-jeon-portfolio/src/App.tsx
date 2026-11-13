@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, BookOpen, ExternalLink, FileText, Mail, Menu, MoveUpRight, X } from 'lucide-react';
 
-const studyPdf = '/assets/vr-billboard-study.pdf';
-const cvPdf = '/assets/sunny-jeon-cv.pdf';
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+const studyPdf = assetUrl('assets/vr-billboard-study.pdf');
+const cvPdf = assetUrl('assets/sunny-jeon-cv.pdf');
+const profilePhoto = assetUrl('assets/sunny-jeon.jpg');
+const featuredFigure = assetUrl('assets/vr-billboard-figure.png');
 const doi = 'https://doi.org/10.1080/01463373.2026.2629568';
 
 const navItems = [
+  ['About', '#about'],
   ['Research', '#research'],
   ['Featured study', '#featured'],
   ['Publications', '#publications'],
@@ -17,8 +21,15 @@ const navItems = [
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const sectionId = decodeURIComponent(window.location.hash.slice(1));
+    if (!sectionId) return;
+
+    document.getElementById(sectionId)?.scrollIntoView();
+  }, []);
+
   return (
-    <div className="portfolio-shell">
+    <div className="portfolio-shell" id="top">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Sunny Jeon — home">
@@ -46,7 +57,7 @@ function App() {
       </header>
 
       <main className="page-content" id="main-content">
-        <section className="hero" id="top" aria-labelledby="hero-title">
+        <section className="hero" id="about" aria-labelledby="hero-title">
           <div className="hero-copy reveal">
             <p className="eyebrow"><span className="status-dot" /> Communication · Michigan State University</p>
             <h1 id="hero-title" className="serif">How do messages<br />move <em>people?</em></h1>
@@ -65,7 +76,7 @@ function App() {
           </div>
           <div className="hero-portrait-wrap reveal reveal-delay">
             <div className="portrait-frame">
-              <img src="/assets/sunny-jeon.jpg" alt="Moonsun (Sunny) Jeon" className="portrait" width="1299" height="1624" />
+              <img src={profilePhoto} alt="Moonsun (Sunny) Jeon" className="portrait" width="1299" height="1624" />
               <div className="portrait-caption"><span>Moonsun “Sunny” Jeon</span><span className="mono">MSU · COMMUNICATION</span></div>
             </div>
             <div className="orbit-stamp" aria-hidden="true"><span>ATTENTION</span><i /><span>MEANING</span><i /><span>INFLUENCE</span><i /></div>
@@ -118,7 +129,7 @@ function App() {
             <figure className="study-figure">
               <div className="figure-overline mono"><span>PARADIGM / VISUAL ATTENTION / RETENTION</span><span>FIG. 01</span></div>
               <a href={studyPdf} target="_blank" rel="noreferrer" aria-label="Open the featured paper, with the study figure">
-                <img src="/assets/vr-billboard-figure.png" alt="Study diagram showing a virtual billboard environment, example messages, and analyses of visual attention and retention" width="1386" height="590" />
+                <img src={featuredFigure} alt="Study diagram showing a virtual billboard environment, example messages, and analyses of visual attention and retention" width="1386" height="590" />
               </a>
               <figcaption><span>Virtual billboard paradigm &amp; key analyses</span><span className="mono">JEON ET AL. · 2026</span></figcaption>
             </figure>
