@@ -62,7 +62,7 @@ function App() {
             <p className="eyebrow"><span className="status-dot" /> Communication · Michigan State University</p>
             <h1 id="hero-title" className="serif">How do messages<br />move <em>people?</em></h1>
             <p className="hero-intro">
-              I’m Moonsun “Sunny” Jeon, a Communication Ph.D. candidate studying persuasion and social influence in health and environmental contexts.
+              I'm Moonsun 'Sunny' Jeon, a Communication Ph.D. candidate studying persuasion and social influence in health, environmental, and AI-mediated communication contexts.
             </p>
             <div className="hero-actions">
               <a className="button button-dark" href="#research">Explore my research <ArrowDown size={15} /></a>
@@ -195,7 +195,8 @@ function App() {
           <div className="section-body teaching-layout">
             <div>
               <p className="eyebrow">Teaching &amp; academic record</p>
-              <h2 id="teaching-title" className="serif section-heading">Research is a<br /><em>conversation.</em></h2>
+              <h2 id="teaching-title" className="serif section-heading">An education is not so much about making a living as making a person.</h2>
+              <p className="teaching-attribution">— Tara Westover, author of <em>Educated</em></p>
             </div>
             <div className="teaching-text">
               <p>Teaching and mentorship are part of the work of making communication research legible, useful, and open to questions.</p>

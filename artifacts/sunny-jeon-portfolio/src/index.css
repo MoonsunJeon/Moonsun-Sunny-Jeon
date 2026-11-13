@@ -542,6 +542,7 @@ body { margin: 0; }
 .scholar-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 21px; color: var(--ink); text-decoration: none; font-size: 10px; border-bottom: 1px solid var(--rust); padding-bottom: 5px; }
 .teaching { padding: 110px 0 109px; }
 .teaching-layout { display: grid; grid-template-columns: 1fr .8fr; gap: 10%; }
+.teaching-attribution { margin: 16px 0 0; color: var(--muted-ink); font-size: 11px; line-height: 1.6; }
 .teaching-text { padding-top: 48px; }
 .teaching-text p + p { margin-top: 15px; }
 .teaching-courses { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--rule); }
