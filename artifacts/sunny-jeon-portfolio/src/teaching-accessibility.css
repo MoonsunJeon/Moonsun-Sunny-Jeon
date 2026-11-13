@@ -1,31 +1,93 @@
-/* Improve legibility of the teaching experience entries. */
+/* Improve legibility and give the teaching section more room to breathe. */
+.teaching {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+
+.teaching-layout {
+  column-gap: 12%;
+}
+
+.teaching-text {
+  padding-top: 56px;
+}
+
+.teaching-courses {
+  margin-top: 32px;
+  border-top-color: #b8b19f;
+}
+
+.teaching-courses li {
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom-color: #b8b19f;
+}
+
 .teaching-courses .course-date {
+  color: #854432;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: .03em;
 }
 
 .teaching-courses strong {
+  color: #153b38;
   font-size: 15px;
-  line-height: 1.55;
-}
-
-.teaching-courses li p {
-  margin-top: 6px;
-  font-size: 13px;
   line-height: 1.6;
 }
 
+.teaching-courses li p {
+  margin-top: 8px;
+  color: #4b625b;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.teaching-text > p {
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.teaching-text > p + p {
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .teaching-layout {
+    column-gap: 7%;
+  }
+}
+
 @media (max-width: 680px) {
+  .teaching {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .teaching-text {
+    padding-top: 32px;
+  }
+
+  .teaching-courses {
+    margin-top: 28px;
+  }
+
+  .teaching-courses li {
+    gap: 8px;
+    padding: 20px 0;
+  }
+
   .teaching-courses .course-date {
     font-size: 12px;
   }
 
   .teaching-courses strong {
     font-size: 16px;
+    line-height: 1.6;
   }
 
   .teaching-courses li p {
+    margin-top: 7px;
     font-size: 14px;
   }
 }
