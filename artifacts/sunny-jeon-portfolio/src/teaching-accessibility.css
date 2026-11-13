@@ -1,0 +1,31 @@
+/* Improve legibility of the teaching experience entries. */
+.teaching-courses .course-date {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: .03em;
+}
+
+.teaching-courses strong {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.teaching-courses li p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .teaching-courses .course-date {
+    font-size: 12px;
+  }
+
+  .teaching-courses strong {
+    font-size: 16px;
+  }
+
+  .teaching-courses li p {
+    font-size: 14px;
+  }
+}
